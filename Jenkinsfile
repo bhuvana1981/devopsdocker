@@ -12,7 +12,7 @@ node {
    }
 }
 stage('push to dockerhub') {
-      docker.withregistry('https://registry.hub.docker.com', 'docker-hub-credentials')
+      docker.withregistry('https://registry.hub.docker.com', 'dhlogin')
       {
       app.push("${env.BUILD_NUMBER}")
       app.push("latest")
